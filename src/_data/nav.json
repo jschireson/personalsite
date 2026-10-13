@@ -1,6 +1,4 @@
 [
   { "label": "Home", "url": "/" },
-  { "label": "Resume", "url": "/resume/" },
-  { "label": "Projects", "url": "/projects/" },
-  { "label": "Contact", "url": "/contact/" }
+  { "label": "Projects", "url": "/projects/" }
 ]

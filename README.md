@@ -11,9 +11,8 @@ npm start     # live preview at http://localhost:8080
 
 | To change…               | Edit                         |
 | ------------------------ | ---------------------------- |
-| Resume                   | `src/resume.html`            |
 | Projects                 | `src/_data/projects.json`    |
-| Contact page             | `src/contact.html`           |
+| Contact links            | `src/_data/links.json`       |
 | Nav links                | `src/_data/nav.json`         |
 | Shared page shell / menu | `src/_includes/layout.njk`   |
 | Styles                   | `src/css/style.css`          |

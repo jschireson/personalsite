@@ -1,6 +1,13 @@
 [
-  { "title": "Blockchain Document Application - Blockety", "description": "", "url": "" },
-  { "title": "Statsheet.io", "description": "", "url": "" },
-  { "title": "Applying Deep Learning to the NBA Draft", "description": "", "url": "" },
-  { "title": "NBA Writing", "description": "", "url": "" }
+  {
+    "title": "NBA Draft Model",
+    "description": "Predicts how college prospects will turn out in the NBA. Scrapes RealGM, Basketball-Reference, Barttorvik and hoop-math into one prospect database, then trains separate neural nets for bigs and non-bigs, backtested one draft class at a time.",
+    "tags": [
+      "Python",
+      "TensorFlow",
+      "scikit-learn",
+      "pandas"
+    ],
+    "url": ""
+  }
 ]

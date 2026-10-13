@@ -1,6 +1,6 @@
 export default function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/css");
-  eleventyConfig.addPassthroughCopy("src/logo.png");
+  eleventyConfig.addPassthroughCopy("src/*.{png,jpg}");
   eleventyConfig.addPassthroughCopy("src/CNAME");
 
   return {

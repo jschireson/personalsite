@@ -1,4 +1,9 @@
 ---
 layout: layout.njk
 ---
-<h1 class="site-title">jacobschireson.com</h1>
+<h1 class="site-title" data-typed>jacobschireson.com</h1>
+<p class="links">
+  {%- for link in links %}
+  <a href="{{ link.url }}">{{ link.label }}</a>
+  {%- endfor %}
+</p>

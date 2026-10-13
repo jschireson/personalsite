@@ -4,11 +4,21 @@ title: Projects
 permalink: /projects/
 ---
 <h2 class="projects-heading">Projects</h2>
-<div class="projects">
+<ol class="projects">
   {%- for project in projects %}
-  <div class="project">
-    <p>{% if project.url %}<a href="{{ project.url }}">{{ project.title }}</a>{% else %}{{ project.title }}{% endif %}</p>
-    <div class="project-preview">{{ project.description }}</div>
-  </div>
+  <li class="project">
+    <span class="project-index">{% if loop.index < 10 %}0{% endif %}{{ loop.index }}</span>
+    <div>
+      <p class="project-title">
+        {%- if project.url %}<a href="{{ project.url }}">{{ project.title }} ↗</a>{% else %}{{ project.title }}{% endif -%}
+      </p>
+      {%- if project.description %}
+      <p class="project-description">{{ project.description }}</p>
+      {%- endif %}
+      {%- if project.tags.length %}
+      <p class="project-tags">{{ project.tags | join(" · ") }}</p>
+      {%- endif %}
+    </div>
+  </li>
   {%- endfor %}
-</div>
+</ol>
