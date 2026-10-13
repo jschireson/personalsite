@@ -1,0 +1,14 @@
+---
+layout: layout.njk
+title: Projects
+permalink: /projects/
+---
+<h2 class="projects-heading">Projects</h2>
+<div class="projects">
+  {%- for project in projects %}
+  <div class="project">
+    <p>{% if project.url %}<a href="{{ project.url }}">{{ project.title }}</a>{% else %}{{ project.title }}{% endif %}</p>
+    <div class="project-preview">{{ project.description }}</div>
+  </div>
+  {%- endfor %}
+</div>

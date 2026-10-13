@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if title %}{{ title }} · {% endif %}Jacob Schireson</title>
+  <meta name="description" content="Jacob Schireson — software engineer.">
+  <link rel="icon" href="/logo.png">
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <button id="menu-toggle" class="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+      <path id="menu-icon" d="M3 6h18M3 12h18m-18 6h18"></path>
+    </svg>
+  </button>
+
+  <div class="page">
+    <main class="content">
+      {{ content | safe }}
+    </main>
+
+    <nav id="nav" class="nav">
+      {%- for item in nav %}
+      <a href="{{ item.url }}"{% if page.url == item.url %} class="active" aria-current="page"{% endif %}>{{ item.label }}</a>
+      {%- endfor %}
+    </nav>
+  </div>
+
+  <script>
+    const toggle = document.getElementById('menu-toggle');
+    const icon = document.getElementById('menu-icon');
+    toggle.addEventListener('click', () => {
+      const open = document.getElementById('nav').classList.toggle('open');
+      toggle.setAttribute('aria-expanded', open);
+      toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      icon.setAttribute('d', open ? 'M6 18L18 6M6 6l12 12' : 'M3 6h18M3 12h18m-18 6h18');
+    });
+  </script>
+</body>
+</html>
